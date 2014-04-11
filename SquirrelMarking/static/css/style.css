@@ -23,7 +23,7 @@ header{
 	left:10%;
 	width:80%;
 	height:15%;
-	background-color:#4D79A3;	
+	background-color:#174c82;	
 
 }
 
@@ -34,7 +34,7 @@ nav{
 	left:10%;
 	width:80%;
 	height:10%;
-	background-color:green;	
+	background-color:#497aaa;	
 }
 
 section{
@@ -44,7 +44,8 @@ section{
 	left:10%;
 	width:80%;
 	bottom:0;
-	height:auto;	background-color:blue;	
+	height:100%;
+	background-color:#E1DFD9;	
 }
 #content_title{
 	margin:auto; width:80%;
