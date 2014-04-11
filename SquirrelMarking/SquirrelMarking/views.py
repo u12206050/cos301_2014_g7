@@ -21,3 +21,18 @@ def marker_home(request):
 	t = get_template('marker.html')
 	html = t.render(Context())
 	return HttpResponse(html)
+
+def assessment_view(request):
+	t = get_template('assessmentView.html')
+	html = t.render(Context())
+	return HttpResponse(html)
+
+def assessment_manager(request):
+	t = get_template('assessmentManager.html')
+	html = t.render(Context())
+	return HttpResponse(html)
+
+def session_manager(request):
+	t = get_template('sessionManager.html')
+	html = t.render(Context())
+	return HttpResponse(html)
