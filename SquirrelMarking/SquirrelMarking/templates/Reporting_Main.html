@@ -5,7 +5,13 @@
 		<script>
 			$(document).ready(function(){
 			
+				$('#displayContainer').hide();
+				
 				$('#containerDisplay').load('Statistics.html');
+				
+				$('.ReportingOptions a').click(function(){
+					return false;
+				});
 				
 				$('#assessReport').click(function(){
 					$('#containerDisplay').load('Statistics.html');
@@ -22,6 +28,15 @@
 				$('#searchBtn').click(function(){
 					$('#list').load('studentChosen.html');
 				});
+				
+				$('#SaveAsPDFBtn').click(function(){
+					//implement code here
+				});
+				
+				$('#SaveAsCVSBtn').click(function(){
+					//implement code here
+				});
+				
 			});
 		</script>
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/static/css/theme.css">
@@ -30,15 +45,47 @@
 		<div class="reports" id="reportingContainer">
 			<div id="reportingMenu">
 				<h2> Reporting Types </h2>
-				<div id="options">
-					<input class="menuButtons" type="button" value="Assessment Report" name="AssessmentReport" id="assessReport"> <br><br>
-					<input class="menuButtons" type="button" value="Student Report" name="StudentReport" id="studentReport"> <br><br>
-					<input class="menuButtons" type="button" value="Audit Report" name="AuditReport" id="auditReport"> <br>
+				<div id="options" class='ReportingOptions'>
+					<a href='Statistics.html'><input class="menuButtons" type="button" value="Assessment Report" name="AssessmentReport" id="assessReport"></a> <br><br>
+					<a href='studentReport.html'><input class="menuButtons" type="button" value="Student Report" name="StudentReport" id="studentReport"></a><br><br>
+					<a href='auditReport.html'><input class="menuButtons" type="button" value="Audit Report" name="AuditReport" id="auditReport"></a><br>
 				</div>
 			</div>
 		</div>
 		<div id='containerDisplay'>
-			
+			<div class="displayContainerClass" id="displayContainer">
+				<h2> COS 332 - Prac 4 </h2>
+				<div id="reportsDisplay">
+					<div id="statisticsContainer">
+						<h3> Statistics &amp; Freqency Analysis </h3>
+						<div id="statistics">
+							<h4> Statistics </h4>
+							<table id="statisticsTable" name="StatisticsTable">
+								<td id="statisticsColumn">
+									<tr> Mean: <span id="meanValue"> 45.67 </span></tr><br/>
+									<tr> Median: <span id="medianValue"> 54 </span></tr><br/>
+									<tr> Mode: <span id="modeValue"> 65 </span></tr><br/>
+									<tr> Range: <span id="rangeValue"> 78 </span></tr><br/>
+								</td>
+							</table>
+						</div>
+						<div id="frequencyAnalysis">
+							<h4> Frequency Analysis </h4>
+							<div id="imageContainer">
+								<img src="{{ STATIC_URL }}/static/img/pieChartDummy.jpg" alt='image cannot be displayed' height='300' width='300'/>
+							</div>
+						</div>
+						<div id="renderingOptions">
+							<h4> Rendering options </h4>
+							<div id="renderAsPDF"> <input class="renderButton" id="SaveAsPDFBtn" name="SaveAsPDf" type="button" value="Save as PDF"> </div><br>
+							<div id="renderAsCSV"> <input class="renderButton" id="SaveAsPDFBtn" name="SaveAsCSV" type="button" value="Save as CSV"> </div>
+						</div>
+					</div>
+					<div id="chartsContainer">
+				
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
