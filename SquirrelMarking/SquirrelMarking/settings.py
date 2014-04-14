@@ -25,7 +25,7 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 TEMPLATE_DIRS = (
-	'C:/Mini-Project/cos301_2014_g7/SquirrelMarking/SquirrelMarking/templates',
+	'C:/Users/User/Desktop/mini/cos301_2014_g7/SquirrelMarking/SquirrelMarking/templates',
 )
 
 ALLOWED_HOSTS = []
@@ -86,7 +86,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-	"C:/Mini-Project/cos301_2014_g7/SquirrelMarking/static",
+	"C:/Users/User/Desktop/mini/cos301_2014_g7/SquirrelMarking/static",
 	)
 STATICFILES_FINDER = (
 	'django.contrib.staticfiles.finders.FileSystemFinder',

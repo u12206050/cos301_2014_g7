@@ -11,20 +11,33 @@ body
 	width:20%;
 	float:left;
 }
-#menu_shortcuts{
-float:right;
-padding-right: 12px;
-margin-right: 30px;
-}
 #menu_shortcuts ul {
 	list-style-type:none;
 	margin:0;
 	padding:0;
-	text-decoration: none;
-	text-transform: uppercase;
-	text-align: center;
-	font-weight: bold;
-	color: #FFFFFF;
+	overflow:hidden;
+}
+#menu_shortcuts li {
+	float: left;
+}
+#menu_shortcuts a {
+	display: block;
+	width: 60px;
+	height: 100px;
+}
+#menu_shortcuts a:link, #menu_shortcuts a:visited {
+	display:block;
+	width:120px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#174c82;
+	text-align:center;
+	padding:4px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+#menu_shortcuts a:hover, #menu_shortcuts a:active {
+	background-color:#497aaa;
 }
 header{
 	position:absolute;
