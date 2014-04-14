@@ -13,7 +13,9 @@ def student_home(request):
 	html = t.render(Context())
 	return HttpResponse(html)
 	
-def lecturer_home(request):
+def lecturer_home(request, uid):
+	a_list = Module.objects.filter(code=uid)
+	return render_to_response('login.html', {'someObject_list': a_list})
 	t = get_template('lecturer.html')
 	html = t.render(Context())
 	return HttpResponse(html)
